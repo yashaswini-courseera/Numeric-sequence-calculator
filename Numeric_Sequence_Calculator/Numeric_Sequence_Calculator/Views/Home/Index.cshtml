@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<form  id="sequenceForm">
+<h2>Enter a Number of your choice to to start Sequencing!</h2>
+@Html.TextBox("txtNumber")
+<br />
+<br />
+@Html.DropDownList("SequenceTypeDrpDwn",new List<SelectListItem> { new SelectListItem { Text="Get consecutive Numbers",Value="1"},
+                                                               new SelectListItem{Text="Get Even series",Value="2"},
+                                                               new SelectListItem{Text="Get Odd series", Value="3"},
+                                                               new SelectListItem{Text="Replace muliple of 3 and 5", Value="4"},
+                                                               new SelectListItem{Text="Get Fibonacci series",Value="5"}},"Select sequence",new { @class = "btn btn-default dropdown-toggle",disabled=true })
+
+<div id="SequencePlaceholder"></div>
+   </form>
